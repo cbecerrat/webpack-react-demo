@@ -1,17 +1,13 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
-import React from 'react';
-import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import store from './app/store'
+import { Provider } from 'react-redux'
+import App from './App'
 
-class HelloWorld extends React.Component {
-    render() {
-        return (
-            <React.Fragment>
-                <h1>Hello, World!</h1>
-                <Button>Press me!</Button>
-            </React.Fragment>
-        );
-    }
-}
-
-ReactDOM.render(<HelloWorld />, document.getElementById('main'));
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('root')
+)
