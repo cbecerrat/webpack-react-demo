@@ -12,9 +12,9 @@ const Counter = function () {
 
     return (
         <React.Fragment>
-            <button onClick={() => dispatch(increment())}>+</button>
-            <span>{count}</span>
             <button onClick={() => dispatch(decrement())}>-</button>
+            <span>{count}</span>
+            <button onClick={() => dispatch(increment())}>+</button>
         </React.Fragment>
     )
 }
